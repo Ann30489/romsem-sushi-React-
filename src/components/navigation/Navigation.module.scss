@@ -1,0 +1,14 @@
+@import "../../App.scss";
+
+.navigation {
+  &__item {
+    text-decoration: none;
+    color: black;
+    @include fontParams($fs-medium, 400);
+    margin: 0 6px;
+    &:hover {
+      color: $c-neon-carrot;
+      transition: $t-normal;
+    }
+  }
+}

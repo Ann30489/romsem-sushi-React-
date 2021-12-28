@@ -1,0 +1,26 @@
+@import "../../App.scss";
+
+.logo {
+  margin: 20px 5px;
+  width: 100%;
+  @include flexCentAlign();
+  margin-bottom: 35px;
+
+  @include for-desktop-1024 {
+    margin-bottom: 20px;
+  }
+  &__wrapper {
+    width: 38%;
+  }
+  &__text {
+    font-family: $f-nexa;
+    @include fontParams($fs-logo, 300);
+    text-align: center;
+
+    @include for-desktop-1024 {
+      font-size: 20px;
+      padding-right: 5px;
+      padding-top: 10px;
+    }
+  }
+}

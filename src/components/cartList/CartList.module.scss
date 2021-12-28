@@ -1,0 +1,139 @@
+@import "../../App.scss";
+
+.cart {
+  margin-top: 40px;
+
+  &__top {
+    background-color: $c-concrete;
+    @include fontParams($fs-list-menu, 600);
+    @include flexBetween;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+  }
+
+  &__removeBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: $c-concrete;
+    background-color: $c-burnt-sienna;
+    @include fontParams(14px, 500);
+    letter-spacing: 1px;
+    min-width: 20%;
+    line-height: 1.8;
+    padding: 0 5px;
+    border-radius: 4px;
+    &:hover {
+      background-color: $c-black;
+      transition: $t-normal;
+    }
+  }
+}
+
+.cartList {
+  list-style-type: none;
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $c-concrete;
+
+    @include for-desktop-1024 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  &__info {
+    padding-left: 15px;
+  }
+
+  &__image {
+    width: 20%;
+  }
+
+  &__total {
+    @include fontParams(24px, 600);
+    margin-bottom: 25px;
+  }
+
+  &__quantity {
+    @include fontParams(17px, 600);
+    margin: 0 5px;
+  }
+
+  &__price {
+    @include fontParams(17px, 600);
+    margin-bottom: 15px;
+  }
+
+  &__quantityContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 20px;
+  }
+
+  &__quantityWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95px;
+    margin-bottom: 20px;
+  }
+
+  &__countBtn {
+    @include flexRowCentAlign;
+    justify-content: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: $c-black;
+    background-color: transparent;
+    font-size: 29px;
+    font-weight: 500;
+    padding: 0 5px;
+    border-radius: 50%;
+    &:hover {
+      transition: $t-normal;
+      background-color: $c-jaffa;
+      color: $c-concrete;
+    }
+  }
+
+  &__order {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: $c-concrete;
+    background-color: $c-jaffa;
+    @include fontParams(20px, 600);
+    letter-spacing: 1px;
+    min-width: 30%;
+    line-height: 2;
+    padding: 0 5px;
+    border-radius: 4px;
+    &:hover {
+      background-color: $c-green;
+      transition: $t-normal;
+    }
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../App.scss";
+
+.sidebarMenu {
+  background-color: $c-white;
+  width: 15%;
+
+  @include for-tablet-768 {
+    display: none;
+  }
+  &__wrapper {
+    margin-left: 20px;
+  }
+  &__container {
+    @include flexCentAlign();
+  }
+}

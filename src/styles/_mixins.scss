@@ -1,0 +1,104 @@
+@mixin centerPosition($value) {
+  max-width: $value + px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@mixin fontParams($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin btnDefault {
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+@mixin btnParams($width, $color) {
+  background-color: $color;
+  width: $width;
+}
+
+@mixin flexBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin flexAround {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flexColCent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexCentAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexRowCentAlign {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Media queries
+@mixin for-large-1920 {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin for-screen-1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin for-screen-1280 {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-phone-480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin for-phone-320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}

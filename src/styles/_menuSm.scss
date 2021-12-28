@@ -1,0 +1,61 @@
+.menuSm {
+  display: none;
+
+  @include for-tablet-768 {
+    display: block;
+  }
+
+  &__list {
+    @include flexAround;
+    @include centerPosition(600);
+  }
+
+  &__link {
+    list-style: none;
+    text-decoration: none;
+    color: $c-black;
+  }
+
+  &__item {
+    @include flexColCent;
+    position: relative;
+  }
+
+  &__name {
+    @include fontParams($fs-list-menu, 500);
+  }
+
+  &__count {
+    padding: 10px;
+  }
+
+  &__countContainer {
+    min-width: 40px;
+    @include flexCentAlign;
+    background-color: $c-green;
+    border-radius: 50%;
+    color: $c-white;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  &__countWrap {
+    position: absolute;
+    top: -5px;
+    right: -30px;
+  }
+}
+
+.icon-menu-ms,
+.icon-cart-ms,
+.icon-comments-ms {
+  width: 50px;
+  height: 50px;
+  fill: $c-neon-carrot;
+}
+
+.menuSm__item:hover > .menuSm__icon > .icon {
+  fill: $c-green;
+  stroke: $c-green;
+  transition: $t-normal;
+}

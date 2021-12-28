@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Svg icons style
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  stroke-width: 0;
+  stroke: $c-edward;
+  fill: $c-edward;
+
+  @include for-desktop-1024 {
+    width: 25px;
+  }
+}
+
+body {
+  font-family: $f-din;
+  font-weight: normal;
+  color: $c-black;
+
+  @include for-desktop-1024 {
+    font-size: 14px;
+  }
+
+  @include for-tablet-768 {
+    font-size: 16px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.central {
+  background-color: $c-concrete;
+  width: 65%;
+
+  @include for-tablet-768 {
+    width: 100%;
+  }
+  &__content {
+    @include centerPosition(1030);
+    padding: 0 20px;
+    height: fit-content;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $c-neon-carrot !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: $c-concrete !important;
+  background-color: $c-black !important;
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50% !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+
+  @include for-desktop-1024 {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: transparent !important;
+    top: 35%;
+  }
+  &:after {
+    font-size: 25px !important;
+    font-weight: 300 !important;
+    @include for-desktop-1024 {
+      color: $c-neon-carrot;
+      font-size: 16px !important;
+    }
+  }
+}
+
+.swiper-button-next {
+  @include for-desktop-1024 {
+    right: 2px !important;
+  }
+}
+
+.swiper-button-prev {
+  @include for-desktop-1024 {
+    left: 2px !important;
+  }
+}
+
+.PhoneInputCountry {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 100%;
+
+  @include for-phone-480 {
+    justify-content: center;
+  }
+}
+
+.PhoneInputCountrySelect {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 60%;
+  background-color: $c-concrete;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  &:hover {
+    color: $c-jaffa;
+    transition: $t-normal;
+  }
+
+  @include for-phone-480 {
+    width: 25%;
+  }
+}
+
+.PhoneInputCountryIcon {
+  width: 30px;
+}
+
+.PhoneInputCountryIconImg {
+  width: 30px;
+}
+
+.PhoneInput {
+  @include for-phone-480 {
+    @include flexCentAlign;
+  }
+}
+
+.PhoneInputInput {
+  border: none;
+  outline: none;
+  background-color: $c-concrete;
+  margin-bottom: 20px;
+  &::placeholder {
+    @include fontParams($fs-20, 500);
+    color: $c-edward;
+    letter-spacing: 1px;
+  }
+  &[type="tel"] {
+    @include fontParams($fs-20, 500);
+    letter-spacing: 1px;
+
+    @include for-desktop-1024 {
+      font-size: 14px;
+    }
+  }
+}

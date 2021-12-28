@@ -1,0 +1,56 @@
+@import "../../App.scss";
+
+.recommendation {
+  margin-bottom: 50px;
+  &__wrapper {
+    @include flexAround;
+
+    @include for-phone-480 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include for-desktop-1024 {
+      padding: 0 10px;
+    }
+
+    @include for-phone-480 {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include fontParams($fs-list-menu, 600);
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    text-align: center;
+    margin-bottom: 25px;
+    @include fontParams($fs-medium, 600);
+  }
+
+  &__price {
+    @include fontParams($fs-list-menu, 700);
+    margin-right: 10px;
+
+    @include for-desktop-1024 {
+      font-size: 20px;
+    }
+  }
+
+  &__info {
+    @include flexCenter;
+  }
+
+  &__add {
+    cursor: pointer;
+    width: 25px;
+  }
+}

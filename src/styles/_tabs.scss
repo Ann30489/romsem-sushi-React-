@@ -1,0 +1,86 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-item:first-child {
+  padding-right: 30px;
+}
+
+.nav-link {
+  cursor: pointer;
+  display: block;
+  @include fontParams($fs-list-menu, 500);
+  color: $c-edward;
+  text-decoration: if(underline == none, null, none);
+
+  &:hover,
+  &:focus {
+    color: $c-neon-carrot;
+    text-decoration: if(null == underline, none, null);
+    transition: $t-normal;
+  }
+}
+
+.nav-tabs {
+  .nav-link {
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $c-edward;
+
+    &:hover,
+    &:focus {
+      isolation: isolate;
+    }
+
+    &.disabled {
+      color: $c-edward;
+      background-color: transparent;
+      border-bottom: 1px solid $c-edward;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $c-black;
+    border: none;
+  }
+}
+
+.nav-fill {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.nav-fill,
+.nav-justified {
+  .nav-item .nav-link {
+    width: 100%;
+  }
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

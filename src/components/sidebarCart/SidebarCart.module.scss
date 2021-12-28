@@ -1,0 +1,11 @@
+@import "../../App.scss";
+
+.sidebarCart {
+  background-color: $c-white;
+  width: 20%;
+  padding: 0 10px;
+
+  @include for-tablet-768 {
+    display: none;
+  }
+}

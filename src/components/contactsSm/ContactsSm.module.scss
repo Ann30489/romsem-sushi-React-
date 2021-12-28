@@ -1,0 +1,129 @@
+@import "../../App.scss";
+
+.contactsSm {
+  display: none;
+  width: 100%;
+
+  @include for-tablet-768 {
+    display: block;
+  }
+
+  &__wrapper {
+    @include centerPosition(700);
+    @include flexBetween;
+    flex-wrap: wrap;
+    @include for-tablet-768 {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    font-size: $fs-medium;
+    &:hover {
+      color: $c-neon-carrot;
+      transition: $t-normal;
+    }
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    @include fontParams($fs-medium, 700);
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @include fontParams($fs-medium, 400);
+    color: $c-edward;
+    margin-bottom: 20px;
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+
+    @include for-phone-480 {
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    @include for-screen-1280 {
+      padding: 5px;
+    }
+  }
+
+  &__social {
+    width: 35%;
+    padding: 0 100px 50px 35px;
+
+    @include for-desktop-1024 {
+      padding: 0 25px 15px 20px;
+    }
+
+    @include for-phone-480 {
+      @include flexCentAlign;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__socialContainer {
+    @include flexBetween();
+
+    @include for-phone-480 {
+      justify-content: flex-start;
+    }
+  }
+
+  &__contacts {
+    width: 50%;
+    line-height: 25px;
+    padding: 0 20px 0 40px;
+
+    @include for-desktop-1024 {
+      padding: 0 20px;
+    }
+
+    @include for-phone-480 {
+      @include flexCentAlign;
+      padding: 0;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    & > a {
+      text-decoration: none;
+    }
+  }
+
+  &__contactsText {
+    @include fontParams($fs-medium, 400);
+    color: $c-edward;
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+  }
+
+  &__contactsTextTel {
+    color: $c-edward;
+  }
+
+  &__contactsTextTel1 {
+    margin-top: 10px;
+  }
+
+  &__contactsTextUnderline {
+    border-bottom: 1px solid $c-edward;
+    &:hover {
+      color: $c-neon-carrot;
+      border-bottom: 1px solid $c-neon-carrot;
+      transition: $t-normal;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "../App.scss";
+
+.product {
+  background-color: $c-white;
+  border-radius: 6px;
+  margin-bottom: 50px;
+
+  &__info {
+    @include for-screen-1280 {
+      padding-left: 10px;
+    }
+    @include for-phone-320 {
+      @include flexCentAlign;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 40px;
+
+    @include for-desktop-1024 {
+      padding: 20px 30px;
+    }
+
+    @include for-phone-480 {
+      padding: 5px;
+    }
+
+    @include for-phone-320 {
+      flex-direction: column;
+      padding: 15px;
+    }
+  }
+
+  &__image {
+    width: 40%;
+
+    @include for-phone-320 {
+      width: 70%;
+    }
+  }
+  &__title {
+    @include fontParams($fs-48, 500);
+    margin-bottom: 10px;
+
+    @include for-desktop-1024 {
+      font-size: 30px;
+    }
+  }
+
+  &__weight {
+    @include fontParams($fs-medium, 300);
+    color: $c-neon-carrot;
+    margin-bottom: 35px;
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__price {
+    @include fontParams($fs-list-menu, 700);
+    margin-bottom: 30px;
+
+    @include for-desktop-1024 {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    @include for-phone-320 {
+      text-align: center;
+    }
+    &__title {
+      @include fontParams($fs-list-menu, 500);
+      margin-bottom: 10px;
+
+      @include for-desktop-1024 {
+        font-size: 18px;
+      }
+    }
+
+    &__text {
+      @include fontParams($fs-list-menu, 300);
+      margin-bottom: 30px;
+
+      @include for-desktop-1024 {
+        font-size: 14px;
+      }
+    }
+  }
+}

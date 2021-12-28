@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.cartSm {
+  display: none;
+  @include for-tablet-768 {
+    display: block;
+    margin-bottom: 100px;
+  }
+}

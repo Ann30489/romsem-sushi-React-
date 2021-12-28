@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.presentation {
+  margin-bottom: 60px;
+
+  @include for-tablet-768 {
+    display: none;
+  }
+}

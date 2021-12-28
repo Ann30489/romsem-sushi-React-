@@ -1,0 +1,63 @@
+@import "../../App.scss";
+
+.card {
+  background-color: $c-white;
+  border-radius: 4px;
+
+  &__top {
+    padding: 20px 15px;
+    padding-bottom: 0;
+    height: 370px;
+
+    @include for-desktop-1024 {
+      height: 310px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 40px;
+    &__double {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    @include fontParams($fs-list-menu, 600);
+    color: $c-black;
+    margin-bottom: 30px;
+    @include for-desktop-1024 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__description {
+    @include fontParams($fs-medium, 400);
+    color: $c-edward;
+    margin-bottom: 20px;
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__price {
+    @include fontParams($fs-list-menu, 700);
+    color: $c-black;
+    @include for-screen-1280 {
+      font-size: 20px;
+    }
+  }
+
+  &__bottom {
+    @include flexRowCentAlign();
+    flex-wrap: wrap;
+    border-top: 1px solid $c-edward;
+    padding: 10px 15px;
+
+    @include for-desktop-1024 {
+      height: 80px;
+    }
+  }
+}

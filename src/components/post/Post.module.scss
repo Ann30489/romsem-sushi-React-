@@ -1,0 +1,40 @@
+@import "../../App.scss";
+
+.post {
+    &__data {
+        max-height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        align-items: center;
+
+        @include for-desktop-1024 {
+            margin-bottom: 16px;
+        }
+
+        &__name {
+            @include fontParams($fs-list-menu, 500);
+            color: $c-black;
+
+            @include for-desktop-1024 {
+                font-size: 20px;
+            }
+        }
+        &__date {
+            @include fontParams($fs-medium, 500);
+            color: $c-edward;
+            margin-left: 40px;
+            padding-top: 2px;
+        }
+        &__text {
+            width: 95%;
+            word-wrap: break-word;
+            @include fontParams($fs-list-menu, 400);
+
+            @include for-desktop-1024 {
+                font-size: 18px;
+            }
+        }
+    }
+}

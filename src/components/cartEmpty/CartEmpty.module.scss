@@ -1,0 +1,37 @@
+@import "../../App.scss";
+
+.cartEmpty {
+  background-color: $c-concrete;
+  @include centerPosition(300);
+  margin-top: 60px;
+  margin-bottom: 50px;
+  border-radius: 6px;
+
+  @include for-desktop-1024 {
+    margin-top: 35px;
+  }
+
+  &__title {
+    @include fontParams($fs-list-menu, 600);
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    @include fontParams($fs-medium, 400);
+    color: $c-edward;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__details {
+    @include fontParams($fs-description, 400);
+    color: $c-concrete;
+    background-color: $c-neon-carrot;
+    text-align: center;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 15px 0;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../App.scss";
+
+.button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: $c-concrete;
+  background-color: $c-jaffa;
+  @include fontParams(24px, 500);
+  letter-spacing: 1px;
+  min-width: 50%;
+  line-height: 1.8;
+  padding: 0 5px;
+  border-radius: 4px;
+
+  @include for-screen-1280 {
+    line-height: 1.5;
+  }
+
+  @include for-desktop-1024 {
+    line-height: 1.2;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $c-neon-carrot;
+    color: $c-white;
+    transition: $t-normal;
+  }
+}

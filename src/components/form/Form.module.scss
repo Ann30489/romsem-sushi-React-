@@ -1,0 +1,108 @@
+@import "../../App.scss";
+
+.errorEmail,
+.errorName {
+    color: $c-red;
+    margin: 0;
+    height: 20px;
+    padding-bottom: 35px;
+    padding-left: 5px;
+    @include fontParams($fs-20, 400);
+
+    @include for-tablet-768 {
+        font-size: 15px;
+    }
+
+    @include for-phone-480 {
+        font-size: 10px;
+    }
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 90px;
+
+    @include for-desktop-1024 {
+        margin-bottom: 50px;
+    }
+}
+
+input {
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    &::placeholder {
+        padding-left: 5px;
+        @include fontParams($fs-medium, 400);
+    }
+    &[type="text"],
+    &[type="email"],
+    &[type="password"] {
+        padding-left: 10px;
+        @include fontParams($fs-medium, 400);
+    }
+}
+
+.registration {
+    &__item {
+        border-radius: 6px;
+        width: 100%;
+        height: 50px;
+    }
+
+    &__label {
+        @include fontParams($fs-medium, 400);
+        padding-bottom: 5px;
+        padding-left: 5px;
+    }
+    &__success {
+        text-align: center;
+        color: $c-green;
+        height: 20px;
+        @include fontParams($fs-20, 400);
+
+        @include for-phone-480 {
+            font-size: 15px;
+            height: 25px;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        margin: 0;
+        padding: 0 5px;
+        line-height: 2.5;
+        background-color: $c-jaffa;
+        border-radius: 6px;
+        color: $c-white;
+        @include fontParams($fs-20, 600);
+        letter-spacing: 1px;
+        min-width: 100%;
+        margin-top: 40px;
+        &:hover {
+            background-color: $c-burnt-sienna;
+            transition: $t-normal;
+        }
+    }
+}
+
+#fName,
+#lName {
+    margin-bottom: 40px;
+}
+
+#password {
+    margin-bottom: 20px;
+}
+
+#email,
+#username {
+    margin-bottom: 5px;
+}

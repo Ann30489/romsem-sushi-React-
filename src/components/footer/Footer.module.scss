@@ -1,0 +1,137 @@
+@import "../../App.scss";
+
+.footer {
+  width: 100%;
+  border-top: 1px solid $c-edward;
+
+  @include for-tablet-768 {
+    background-color: $c-white;
+  }
+
+  &__wrapper {
+    @include centerPosition(1030);
+    @include flexCenter();
+    padding: 0 20px;
+    padding-top: 20px;
+
+    @include for-tablet-768 {
+      display: block;
+      padding: 10px 20px;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    font-size: $fs-medium;
+    &:hover {
+      color: $c-neon-carrot;
+      transition: $t-normal;
+    }
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    @include fontParams($fs-medium, 700);
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__menu {
+    width: 30%;
+    &:first-child {
+      margin-top: 10px;
+    }
+
+    @include for-tablet-768 {
+      display: none;
+    }
+  }
+
+  &__text {
+    @include fontParams($fs-medium, 400);
+    color: $c-edward;
+    margin-bottom: 20px;
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+  }
+
+  &__icon {
+    transition: $t-normal;
+    width: 50px;
+    border-radius: 50%;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include for-screen-1280 {
+      padding: 5px;
+    }
+  }
+
+  &__social {
+    width: 35%;
+    border-left: 1px solid $c-edward;
+    border-right: 1px solid $c-edward;
+    padding: 0 100px 50px 35px;
+
+    @include for-desktop-1024 {
+      padding: 0 25px 15px 20px;
+    }
+
+    @include for-tablet-768 {
+      display: none;
+    }
+  }
+
+  &__socialContainer {
+    @include flexBetween();
+  }
+
+  &__contacts {
+    width: 35%;
+    line-height: 25px;
+    padding: 0 20px 0 40px;
+
+    @include for-tablet-768 {
+      display: none;
+    }
+
+    @include for-desktop-1024 {
+      padding: 0 20px;
+    }
+    & > a {
+      text-decoration: none;
+    }
+  }
+
+  &__contactsText {
+    @include fontParams($fs-medium, 400);
+    color: $c-edward;
+
+    @include for-desktop-1024 {
+      font-size: 16px;
+    }
+  }
+
+  &__contactsTextTel {
+    color: $c-edward;
+  }
+
+  &__contactsTextTel1 {
+    margin-top: 10px;
+  }
+
+  &__contactsTextUnderline {
+    white-space: nowrap;
+    border-bottom: 1px solid $c-edward;
+    &:hover {
+      color: $c-neon-carrot;
+      border-bottom: 1px solid $c-neon-carrot;
+      transition: $t-normal;
+    }
+  }
+}

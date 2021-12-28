@@ -1,0 +1,163 @@
+@import "../../App.scss";
+
+.header {
+  border-bottom: 1px solid $c-edward;
+
+  @include for-tablet-768 {
+    background-color: $c-white;
+  }
+
+  &__numberContainerSm {
+    display: none;
+
+    @include for-tablet-768 {
+      display: block;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include for-tablet-768 {
+      @include centerPosition(700);
+      padding: 15px 10px;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    display: none;
+    @include for-tablet-768 {
+      display: block;
+    }
+  }
+
+  &__svg {
+    width: 15px;
+    height: 15px;
+
+    @include for-tablet-768 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__main {
+    @include flexBetween();
+    align-items: center;
+    width: 80%;
+    padding: 0 20px;
+
+    @include for-tablet-768 {
+      display: none;
+    }
+  }
+  &__contacts {
+    border-right: 1px solid $c-edward;
+    width: 18%;
+    @include flexCentAlign();
+    padding: 10px;
+
+    @include for-tablet-768 {
+      border-right: none;
+      padding: 0;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+  &__schedule {
+    @include flexCenter();
+    margin-top: 8px;
+
+    @include for-tablet-768 {
+      width: 80px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__title {
+    @include fontParams($fs-medium, 700);
+
+    @include for-desktop-1024 {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    @include for-tablet-768 {
+      display: none;
+    }
+  }
+
+  &__text {
+    @include fontParams($fs-description, 500);
+    color: $c-edward;
+    margin-left: 5px;
+    letter-spacing: 1px;
+
+    @include for-desktop-1024 {
+      font-size: 10px;
+    }
+
+    @include for-tablet-768 {
+      font-size: 16px;
+      margin-left: 0;
+      padding: 5px 10px;
+    }
+  }
+
+  &__number {
+    @include fontParams($fs-medium, 700);
+    color: $c-neon-carrot;
+    text-align: center;
+    white-space: nowrap;
+    @include for-screen-1280 {
+      font-size: 14px;
+    }
+    @include for-desktop-1024 {
+      font-size: 10px;
+    }
+
+    @include for-tablet-768 {
+      display: none;
+    }
+  }
+
+  &__numberSm {
+    @include fontParams($fs-16, 700);
+    color: $c-neon-carrot;
+    text-align: center;
+  }
+
+  &__titleSm {
+    @include fontParams($fs-16, 700);
+    text-align: center;
+  }
+
+  &__linkSm {
+    display: none;
+    @include for-tablet-768 {
+      text-decoration: none;
+      display: block;
+    }
+    &__name {
+      @include fontParams($fs-16, 600);
+      color: $c-black;
+      &:hover {
+        color: $c-neon-carrot;
+        transition: $t-normal;
+      }
+    }
+  }
+
+  &__cityTitle {
+    color: $c-edward;
+    @include fontParams($fs-description, 300);
+    line-height: 25px;
+  }
+  &__cityName {
+    @include fontParams($fs-medium, 400);
+  }
+}

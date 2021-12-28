@@ -1,0 +1,116 @@
+@import "../../App.scss";
+
+.posts {
+    &__item {
+        list-style-type: none;
+        max-height: fit-content;
+        width: 100%;
+        background-color: $c-white;
+        border-radius: 6px;
+        margin-bottom: 35px;
+        padding: 20px 15px;
+    }
+    &__title {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 60px;
+        @include fontParams($fs-logo, 600);
+
+        @include for-desktop-1024 {
+            margin: 25px 0;
+        }
+    }
+    &__form {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    &__warn {
+        color: $c-burnt-sienna;
+        height: 20px;
+        @include fontParams($fs-22, 500);
+
+        @include for-desktop-1024 {
+            font-size: 18px;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        margin: 20px 0;
+        padding: 0 5px;
+        min-width: 250px;
+        line-height: 2;
+        background-color: $c-black;
+        border-radius: 8px;
+        color: $c-white;
+        @include fontParams($fs-list-menu, 400);
+        &:hover {
+            background-color: $c-jaffa;
+            transition: $t-normal;
+        }
+
+        @include for-desktop-1024 {
+            min-width: 170px;
+            font-size: 18px;
+        }
+    }
+    &__list {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 95px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include for-desktop-1024 {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.inputField {
+    border: 1px solid black;
+    border-radius: 8px 8px 8px 8px;
+    margin-bottom: 25px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    width: 80%;
+    padding: 10px;
+    max-width: 200px;
+}
+
+#text {
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    max-height: 550px;
+    max-width: 1050px;
+    min-width: 200px;
+    min-height: 225px;
+    width: 100%;
+    padding: 10px;
+    resize: both;
+    margin-bottom: 5px;
+}
+
+#textLable,
+#nameLable {
+    margin-bottom: 10px;
+}
+
+.inputWordCount {
+    margin-bottom: 20px;
+}
+.inputWordCount > span {
+    min-width: 20px;
+    padding-left: 10px;
+}
